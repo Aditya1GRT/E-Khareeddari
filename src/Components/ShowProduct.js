@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { Button, Modal } from 'rsuite';
+import { Button, Icon, Modal } from 'rsuite';
 import { useCartDispatch } from '../misc/cart.context';
 import { useModalState } from '../misc/custom-hooks';
 import { StyledShowProduct } from './ShowProduct.styled';
@@ -44,11 +44,23 @@ const ShowProduct = ({
           </h4>
 
           <div className="btns d-inline-flex">
-            <Button onClick={open} className="mr-3">
-              Preview
+            <Button
+              style={{
+                padding: '5px 10px',
+              }}
+              onClick={open}
+              className="mr-3"
+            >
+              View <Icon style={{ marginLeft: '5px' }} icon="eye" />
             </Button>
-            <Button onClick={() => addToCart(inStock, id, price)} type="button">
-              Add to Cart
+            <Button
+              onClick={() => addToCart(inStock, id, price)}
+              style={{
+                padding: '5px 10px',
+              }}
+              type="button"
+            >
+              Add <Icon style={{ marginLeft: '5px' }} icon="cart-plus" />
             </Button>
           </div>
         </>
@@ -56,8 +68,14 @@ const ShowProduct = ({
         <>
           <h4 className="text-red">Out Of Stock</h4>
           <div className="btns d-inline-flex">
-            <Button onClick={open} className="mr-3 mt-3">
-              Preview
+            <Button
+              style={{
+                padding: '5px 10px',
+              }}
+              onClick={open}
+              className="mr-3 mt-3"
+            >
+              View <Icon style={{ marginLeft: '5px' }} icon="eye" />
             </Button>
           </div>
         </>

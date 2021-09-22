@@ -22,7 +22,12 @@ const Navbar = () => {
   );
 
   return (
-    <Nav appearance="tabs" style={{ height: '50px' }} justified>
+    <Nav
+      className="nav-bar"
+      appearance="tabs"
+      style={{ height: '50px' }}
+      justified
+    >
       {pathname !== '/Checkout' ? (
         <>
           {!isMobile ? (
@@ -33,7 +38,7 @@ const Navbar = () => {
                     <b>Home</b>
                   </Link>
                 </Nav.Item>
-                <Nav.Item icon={<Icon icon="shopping-cart" />}>
+                <Nav.Item icon={<Icon icon="opencart" />}>
                   <Link to="/Checkout" className="link-unstyled text-black">
                     <b>Checkout</b>
                   </Link>

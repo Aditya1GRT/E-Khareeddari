@@ -3,6 +3,7 @@ import { Button, ButtonGroup, Table } from 'reactstrap';
 import Navbar from '../Components/Navigation/Navbar';
 import PRODUCTS from '../Database/products.json';
 import { useCart, useCartDispatch } from '../misc/cart.context';
+import { useMediaQuery } from '../misc/custom-hooks';
 
 function getCheckoutItems(products, cartItems) {
   const productInCart = products.filter(p =>
@@ -50,19 +51,30 @@ const Checkout = () => {
     },
     [dispatchCart]
   );
-
+  const isMobile = useMediaQuery(`(max-width: 992px)`);
   return (
-    <div>
+    <div
+      style={{
+        padding: `${isMobile ? ' 0' : 'auto'}`,
+      }}
+    >
       <Navbar />
 
-      <div>
+      <div
+        style={{
+          width: `${isMobile ? '100%' : '70%'}`,
+          margin: `${isMobile ? '20vh 0' : '20vh auto'}`,
+          padding: `${isMobile ? ' 0' : 'auto'}`,
+        }}
+      >
         <h3 className="mb-3 mt-3 ml-3">Checkout</h3>
         <div
           className="bg-black-02 p-3"
           style={{
-            margin: '30px',
+            margin: '3px',
             border: '1px solid black',
             borderRadius: '5px',
+            backgroundColor: 'white',
           }}
         >
           <Table responsive>
@@ -82,7 +94,10 @@ const Checkout = () => {
                     <img
                       src={el.thumbnail}
                       alt={el.name}
-                      style={{ width: 50, height: 'auto' }}
+                      style={{
+                        width: `${isMobile ? '30px' : '70px'}`,
+                        height: 'auto',
+                      }}
                     />
                   </td>
                   <td className="font-bolder align-items-center text-nowrap">
@@ -92,19 +107,19 @@ const Checkout = () => {
                     ${el.price}
                   </td>
                   <td className="font-bolder align-items-center">
-                    <ButtonGroup>
+                    <ButtonGroup
+                      style={{ fontSize: `${isMobile ? '10px' : ''}` }}
+                    >
                       <Button
-                        size="sm"
+                        size="xs"
                         type="button"
                         onClick={() => handleRemoveOne(el.id)}
                       >
                         -
                       </Button>
-                      <Button disabled style={{ width: 45 }}>
-                        {el.quantity}
-                      </Button>
+                      <Button disabled>{el.quantity}</Button>
                       <Button
-                        size="sm"
+                        size="xs"
                         type="button"
                         onClick={() => handleAdd(el.id)}
                       >

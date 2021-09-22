@@ -62,31 +62,33 @@ const Categories = () => {
   return (
     <>
       <Navbar />
-      <span className=" ml-3 mt-2 font-bolder">
-        <u>FILTER</u>:
-      </span>
-      <div className="ml-3 mt-2 d-inline-flex">
-        <FilterNav
-          id="inStock"
-          name="inStock"
-          checked={filter.inStock}
-          onChange={onFilterChange}
-          label="In Stock"
-        />
-        <FilterNav
-          id="delivery"
-          name="delivery"
-          checked={filter.delivery}
-          onChange={onFilterChange}
-          label="Delivery"
-        />
-        <FilterNav
-          id="expensive"
-          name="expensive"
-          checked={filter.expensive}
-          onChange={onFilterChange}
-          label="Expensive"
-        />
+      <div className="filter-nav">
+        <span className=" ml-3 mt-2 font-bolder ">
+          <u>FILTER</u>:
+        </span>
+        <div className="ml-3 mt-2 d-inline-flex">
+          <FilterNav
+            id="inStock"
+            name="inStock"
+            checked={filter.inStock}
+            onChange={onFilterChange}
+            label="In Stock"
+          />
+          <FilterNav
+            id="delivery"
+            name="delivery"
+            checked={filter.delivery}
+            onChange={onFilterChange}
+            label="Delivery"
+          />
+          <FilterNav
+            id="expensive"
+            name="expensive"
+            checked={filter.expensive}
+            onChange={onFilterChange}
+            label="Expensive"
+          />
+        </div>
       </div>
       <Divider />
       <h2 className="ml-3">{category.name}</h2>

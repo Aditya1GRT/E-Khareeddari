@@ -10,7 +10,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-color: #fcfcfc;
+  background-color: #ccc;
 }
 
 html,
@@ -38,6 +38,17 @@ body,
     width: auto !important;
     height: auto !important;
   }
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: center;
+}
+
+.filter-nav {
+  display: flex;
+
+  justify-content: center;
 }
 
 .chat-top,
