@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/e-khareeddari/static/css/main.8d5a2724.chunk.css",
+    "main.js": "/e-khareeddari/static/js/main.a76f9080.chunk.js",
+    "main.js.map": "/e-khareeddari/static/js/main.a76f9080.chunk.js.map",
+    "runtime-main.js": "/e-khareeddari/static/js/runtime-main.f0dec537.js",
+    "runtime-main.js.map": "/e-khareeddari/static/js/runtime-main.f0dec537.js.map",
+    "static/css/2.7785af68.chunk.css": "/e-khareeddari/static/css/2.7785af68.chunk.css",
+    "static/js/2.e6ccd5df.chunk.js": "/e-khareeddari/static/js/2.e6ccd5df.chunk.js",
+    "static/js/2.e6ccd5df.chunk.js.map": "/e-khareeddari/static/js/2.e6ccd5df.chunk.js.map",
+    "index.html": "/e-khareeddari/index.html",
+    "static/css/2.7785af68.chunk.css.map": "/e-khareeddari/static/css/2.7785af68.chunk.css.map",
+    "static/css/main.8d5a2724.chunk.css.map": "/e-khareeddari/static/css/main.8d5a2724.chunk.css.map",
+    "static/js/2.e6ccd5df.chunk.js.LICENSE.txt": "/e-khareeddari/static/js/2.e6ccd5df.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f0dec537.js",
+    "static/css/2.7785af68.chunk.css",
+    "static/js/2.e6ccd5df.chunk.js",
+    "static/css/main.8d5a2724.chunk.css",
+    "static/js/main.a76f9080.chunk.js"
+  ]
+}
